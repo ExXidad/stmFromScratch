@@ -1,0 +1,251 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 User, 123, LIC=WHYH9-4MUMD-SB9EJ-UIRXH-12VWJ-0DL6B
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\User\Documents\Keil_Projects\stmFromScratch\stmFromScratch.uvprojx
+Project File Date:  02/27/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f746xx.s...
+src/main.cpp(1): warning: In file included from...
+src/../inc/stm32f746xx.h(159): warning: commas at the end of enumerator lists are incompatible with C++98 [-Wc++98-compat-pedantic]
+  SPDIF_RX_IRQn               = 97,     /*!< SPDIF-RX global Interrupt                                         */
+                                  ^~
+src/main.cpp(6): warning: use of old-style cast [-Wold-style-cast]
+        RCC->AHB1ENR |= RCC_AHB1ENR_GPIOIEN;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(9): warning: use of old-style cast [-Wold-style-cast]
+        GPIOI->MODER |= (0b01 << 2);
+        ^~~~~
+src/../inc/stm32f746xx.h(1365): note: expanded from macro 'GPIOI'
+#define GPIOI               ((GPIO_TypeDef *) GPIOI_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(9): warning: binary integer literals are incompatible with C++ standards before C++14 [-Wc++98-c++11-compat-binary-literal]
+        GPIOI->MODER |= (0b01 << 2);
+                         ^
+src/main.cpp(12): warning: use of old-style cast [-Wold-style-cast]
+        GPIOI->BSRR |= (1 << 1);
+        ^~~~~
+src/../inc/stm32f746xx.h(1365): note: expanded from macro 'GPIOI'
+#define GPIOI               ((GPIO_TypeDef *) GPIOI_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        while ((GPIOI->IDR & (1 << 11)) != (1 << 11));
+                ^~~~~
+src/../inc/stm32f746xx.h(1365): note: expanded from macro 'GPIOI'
+#define GPIOI               ((GPIO_TypeDef *) GPIOI_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(18): warning: use of old-style cast [-Wold-style-cast]
+        GPIOI->BSRR |= (1 << 17);
+        ^~~~~
+src/../inc/stm32f746xx.h(1365): note: expanded from macro 'GPIOI'
+#define GPIOI               ((GPIO_TypeDef *) GPIOI_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(21): warning: use of old-style cast [-Wold-style-cast]
+        RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->MODER |= (0b10 << 9 * 2); // PA9
+        ^~~~~
+src/../inc/stm32f746xx.h(1357): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(25): warning: binary integer literals are incompatible with C++ standards before C++14 [-Wc++98-c++11-compat-binary-literal]
+        GPIOA->MODER |= (0b10 << 9 * 2); // PA9
+                         ^
+src/main.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->MODER |= (0b10 << 7 * 2); // PB7
+        ^~~~~
+src/../inc/stm32f746xx.h(1358): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(26): warning: binary integer literals are incompatible with C++ standards before C++14 [-Wc++98-c++11-compat-binary-literal]
+        GPIOB->MODER |= (0b10 << 7 * 2); // PB7
+                         ^
+src/main.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->AFR[1] |= (0b111 << (4 * (9 - 8)));
+        ^~~~~
+src/../inc/stm32f746xx.h(1357): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(29): warning: binary integer literals are incompatible with C++ standards before C++14 [-Wc++98-c++11-compat-binary-literal]
+        GPIOA->AFR[1] |= (0b111 << (4 * (9 - 8)));
+                          ^
+src/main.cpp(32): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->AFR[0] |= (0b111 << (4 * (7 - 0)));
+        ^~~~~
+src/../inc/stm32f746xx.h(1358): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+src/main.cpp(32): warning: binary integer literals are incompatible with C++ standards before C++14 [-Wc++98-c++11-compat-binary-literal]
+        GPIOB->AFR[0] |= (0b111 << (4 * (7 - 0)));
+                          ^
+src/main.cpp(35): warning: use of old-style cast [-Wold-style-cast]
+        RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(36): warning: use of old-style cast [-Wold-style-cast]
+        USART1->BRR = 1667;
+        ^~~~~~
+src/../inc/stm32f746xx.h(1331): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+src/main.cpp(37): warning: use of old-style cast [-Wold-style-cast]
+        USART1->CR1 |= USART_CR1_TE;
+        ^~~~~~
+src/../inc/stm32f746xx.h(1331): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+src/main.cpp(38): warning: use of old-style cast [-Wold-style-cast]
+        USART1->CR1 |= USART_CR1_UE;
+        ^~~~~~
+src/../inc/stm32f746xx.h(1331): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+src/main.cpp(43): warning: use of old-style cast [-Wold-style-cast]
+                USART1->TDR = '7';
+                ^~~~~~
+src/../inc/stm32f746xx.h(1331): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+src/main.cpp(44): warning: use of old-style cast [-Wold-style-cast]
+                while (!(USART1->ISR & USART_ISR_TXE));
+                         ^~~~~~
+src/../inc/stm32f746xx.h(1331): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+src/main.cpp(46): warning: use of old-style cast [-Wold-style-cast]
+        RCC->CR |= RCC_CR_HSEON;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(47): warning: use of old-style cast [-Wold-style-cast]
+        while ((RCC->CR & RCC_CR_HSERDY) != RCC_CR_HSERDY)
+                ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(49): warning: use of old-style cast [-Wold-style-cast]
+        RCC->CFGR |= RCC_CFGR_SW_HSE;
+        ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+        while ((RCC->CFGR & RCC_CFGR_SWS_HSE) == 0)
+                ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(53): warning: use of old-style cast [-Wold-style-cast]
+        sws = (RCC->CFGR & RCC_CFGR_SWS) >>
+               ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(55): warning: use of old-style cast [-Wold-style-cast]
+        hpre = (RCC->CFGR & RCC_CFGR_HPRE) >>
+                ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(57): warning: use of old-style cast [-Wold-style-cast]
+        ppre2 = (RCC->CFGR & RCC_CFGR_PPRE2) >>
+                 ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(59): warning: use of old-style cast [-Wold-style-cast]
+        ppre1 = (RCC->CFGR & RCC_CFGR_PPRE1) >>
+                 ^~~
+src/../inc/stm32f746xx.h(1369): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+src/main.cpp(52): warning: variable 'sws' set but not used [-Wunused-but-set-variable]
+        uint32_t sws = 0, hpre = 0, ppre2 = 0, ppre1 = 0;
+                 ^
+src/main.cpp(52): warning: variable 'hpre' set but not used [-Wunused-but-set-variable]
+        uint32_t sws = 0, hpre = 0, ppre2 = 0, ppre1 = 0;
+                          ^
+src/main.cpp(52): warning: variable 'ppre2' set but not used [-Wunused-but-set-variable]
+        uint32_t sws = 0, hpre = 0, ppre2 = 0, ppre1 = 0;
+                                    ^
+src/main.cpp(52): warning: variable 'ppre1' set but not used [-Wunused-but-set-variable]
+        uint32_t sws = 0, hpre = 0, ppre2 = 0, ppre1 = 0;
+                                               ^
+35 warnings generated.
+compiling main.cpp...
+compiling system_stm32f7xx.c...
+linking...
+Program Size: Code=644 RO-data=472 RW-data=0 ZI-data=1632  
+".\Objects\stmFromScratch.axf" - 0 Error(s), 35 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.15.1.pack
+                Keil.STM32F7xx_DFP.2.15.1
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/User/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/User/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.15.1/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.2.5
+      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f746xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

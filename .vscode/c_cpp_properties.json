@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "name": "Target 1",
+      "includePath": [
+        "C:/Keil_v5/ARM/ARMCC/include",
+        "C:/Keil_v5/ARM/ARMCLANG/include"
+      ],
+        "defines": [
+      ]
+    }
+  ],
+  "version": 4
+}
